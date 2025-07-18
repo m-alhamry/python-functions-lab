@@ -152,18 +152,16 @@ print('Exercise 8:', product(2, 5, 5))
 
 def basic_calculator(num1, num2, operation):
     operation = operation.lower()
-    if operation == 'add':
+    if operation == "add":
         return num1 + num2
-    elif operation == 'subtract':
+    if operation == "subtract":
         return num1 - num2
-    elif operation == 'multiply':
+    if operation == "multiply":
         return num1 * num2
-    elif operation == 'divide':
-        if num2 != 0:
-            return num1 / num2
-        else:
+    if operation == "divide":
+        if num2 == 0:
             return "Error: Division by zero"
-    else:
-        return "Error: Invalid operation"
-
+        return num1 / num2
+    return "Error: Invalid operation"
+    
 print('Exercise 9 Result:', basic_calculator(10, 5, "subtract"))
